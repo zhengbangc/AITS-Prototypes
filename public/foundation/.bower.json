@@ -1,33 +1,41 @@
 {
-  "name": "foundation",
-  "version": "5.5.1",
+  "name": "foundation-sites",
+  "version": "6.1.2",
   "main": [
-    "css/foundation.css",
-    "css/foundation.css.map",
-    "js/foundation.js"
+    "scss/foundation.scss",
+    "dist/foundation.js"
   ],
-  "ignore": [],
+  "ignore": [
+    "config",
+    "docs",
+    "gulp",
+    "lib",
+    "test",
+    "composer.json",
+    "CONTRIBUTING.md",
+    "gulpfile.js",
+    "meteor-README.md",
+    "package.js",
+    "package.json",
+    "sache.json",
+    ".editorconfig",
+    ".npm",
+    ".gitignore",
+    ".npmignore",
+    ".versions"
+  ],
   "dependencies": {
-    "jquery": ">= 2.1.0",
-    "modernizr": ">= 2.7.2",
-    "fastclick": ">=0.6.11",
-    "jquery.cookie": "~1.4.0",
-    "jquery-placeholder": "~2.0.7"
+    "jquery": "~2.1.0",
+    "what-input": "~1.1.2"
   },
-  "devDependencies": {
-    "jquery.autocomplete": "devbridge/jQuery-Autocomplete#1.2.9",
-    "lodash": "~2.4.1"
-  },
-  "private": true,
-  "homepage": "https://github.com/zurb/bower-foundation",
-  "_release": "5.5.1",
+  "homepage": "https://github.com/zurb/foundation-sites",
+  "_release": "6.1.2",
   "_resolution": {
     "type": "version",
-    "tag": "5.5.1",
-    "commit": "bf07a7551bc3e599404d9cb2eb2251a95c1ea782"
+    "tag": "v6.1.2",
+    "commit": "b7cedf57265b8c8ed9b746096cc2dd9dade9c55c"
   },
-  "_source": "git://github.com/zurb/bower-foundation.git",
-  "_target": "~5.5.1",
-  "_originalSource": "foundation",
-  "_direct": true
+  "_source": "git://github.com/zurb/foundation-sites.git",
+  "_target": "~6.1.0",
+  "_originalSource": "foundation-sites"
 }
