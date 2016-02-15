@@ -13,9 +13,7 @@ module.exports = function(grunt) {
           mangle: false
         },
         files: {
-          'public/js/script.js': ['js/script.js'],
-          'public/js/controllers.js': ['js/controllers.js'],
-          'public/js/app.js': ['js/app.js']
+          'public/js/script.js': ['source_js/script.js'],
         } //files
       } //my_target
     }, //uglify
@@ -73,5 +71,5 @@ module.exports = function(grunt) {
   }
   }) //initConfig
   grunt.registerTask('default', ['express:dev', 'watch']);
-  grunt.registerTask('serve', ['express:dev', 'watch']);
+  grunt.registerTask('serve', ['express:dev', 'watch', 'uglify']);
 } //exports
