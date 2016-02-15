@@ -5,6 +5,7 @@
  * Licensed under MIT Open Source
  */
 
+
 // Sass utilities
 @import 'util/util';
 
@@ -89,3 +90,5 @@
   @include foundation-tooltip;
   @include foundation-top-bar;
 }
+
+@include foundation-everything;
