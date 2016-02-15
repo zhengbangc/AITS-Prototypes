@@ -48,7 +48,7 @@ module.exports = function(grunt) {
         //tasks: ['copy']
       }, //script
       sass: {
-        files: ['sass/*.scss'],
+        files: ['source_sass/*.scss'],
         tasks: ['compass:dev','compass:foundation']
       }, //sass
       sass_foundation: {
@@ -70,6 +70,6 @@ module.exports = function(grunt) {
       }
   }
   }) //initConfig
-  grunt.registerTask('default', ['express:dev', 'watch']);
+  grunt.registerTask('default', ['express:dev', 'watch', 'uglify']);
   grunt.registerTask('serve', ['express:dev', 'watch', 'uglify']);
 } //exports
