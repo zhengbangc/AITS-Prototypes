@@ -54,7 +54,7 @@ module.exports = function(grunt) {
         tasks: ['compass:dev','compass:foundation']
       }, //sass
       sass_foundation: {
-        files: ['public/foundation/scss/foundation.scss','public/foundation/scss/foundation/*.scss','public/foundation/scss/foundation/components/*.scss'],
+        files: ['public/foundation6_lib/scss/foundation.scss','public/foundation/scss/*.scss','public/foundation6_lib/scss/components/*.scss'],
         tasks: ['compass:foundation']
       }, //sass_foundation
       html: {
@@ -73,4 +73,5 @@ module.exports = function(grunt) {
   }
   }) //initConfig
   grunt.registerTask('default', ['express:dev', 'watch']);
+  grunt.registerTask('serve', ['express:dev', 'watch']);
 } //exports
