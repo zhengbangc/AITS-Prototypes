@@ -13,9 +13,7 @@ module.exports = function(grunt) {
           mangle: false
         },
         files: {
-          'public/js/script.js': ['js/script.js'],
-          'public/js/controllers.js': ['js/controllers.js'],
-          'public/js/app.js': ['js/app.js']
+          'public/js/script.js': ['source_js/script.js'],
         } //files
       } //my_target
     }, //uglify
@@ -50,11 +48,19 @@ module.exports = function(grunt) {
         //tasks: ['copy']
       }, //script
       sass: {
-        files: ['sass/*.scss'],
+        files: ['source_sass/*.scss'],
         tasks: ['compass:dev','compass:foundation']
       }, //sass
       sass_foundation: {
-        files: ['public/foundation/scss/foundation.scss','public/foundation/scss/foundation/*.scss','public/foundation/scss/foundation/components/*.scss'],
+        files: ['public/foundation6_lib/scss/foundation.scss',
+                'public/foundation6_lib/scss/*.scss',
+                'public/foundation6_lib/scss/components/*.scss',
+                'public/foundation6_lib/scss/forms/*.scss',
+                'public/foundation6_lib/scss/grid/*.scss',
+                'public/foundation6_lib/scss/settings/*.scss',
+                'public/foundation6_lib/scss/typography/*.scss',
+                'public/foundation6_lib/scss/util/*.scss',
+        ],
         tasks: ['compass:foundation']
       }, //sass_foundation
       html: {
@@ -72,5 +78,5 @@ module.exports = function(grunt) {
       }
   }
   }) //initConfig
-  grunt.registerTask('default', ['express:dev', 'watch']);
+  grunt.registerTask('default', ['express:dev', 'watch', 'uglify']);
 } //exports
